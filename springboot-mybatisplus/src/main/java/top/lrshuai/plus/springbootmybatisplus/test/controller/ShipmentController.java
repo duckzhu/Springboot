@@ -24,6 +24,11 @@ public class ShipmentController  {
     @Autowired
     private IShipmentService iShipmentService;
 
+    @GetMapping("/")
+    public String testHello(TestDTO dto){
+        return  "hello,world";
+    }
+
     @GetMapping("/test")
     public Object test(TestDTO dto){
         return  iShipmentService.getList(dto);
